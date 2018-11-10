@@ -1,344 +1,201 @@
 @media (min-width: 320px) {
-  .section-footer {
-    .container {
-      .footer__content {
-        font-family: $Montserrat;
-        padding: 28px 8px 0 8px;
-        .about {
-          .logo {
-            text-decoration: none;
-            display: inline-block;
-            width: 100px;
-            &:hover {
-              .logo__text {
-                color: $purple;
-                &--IO {
-                  color: #333333;
-                }
-              }
-            }
-            &__img {
-            }
-            &__text {
-              color: #333333;
-              font-size: $font +8;
-              margin-top: 40px;
-              &--IO {
-                color: $purple;
-                margin-left: -5px;
-              }
-            }
-          }
-          .about__text {
-            font-size: $font -2;
-            color: $textColor;
-            line-height: 21px;
-            margin: 36px 0;
-            width: 80vw;
-          }
-        }
-        .navigation {
-          &__heading {
-            font-size: $font;
-            color: $darkHeader;
-          }
-          .navigation-list {
-            margin: 23px 0 37px 0;
-            &__item {
-
-            }
-            &__link {
-              text-decoration: none;
-              color: $purple;
-              font-size: $font -1;
-              line-height: 23px;
-              &:hover {
-                text-decoration: underline;
-              }
-            }
-          }
-        }
-        .contacts {
-          .contact-phone {
-            &__number {
-              color: #31384d;
-              font-size: 30px;
-              font-weight: 700;
-              text-decoration: none;
-            }
-            &__call-time {
-              color: $textColor;
-              font-size: 12px;
-              line-height: 28px;
-            }
-          }
-          .contact-address {
-            &__city {
-              color: $darkHeader;
-              font-size: $font;
-              line-height: 28px;
-              margin: 38px 0 20px;
-            }
-            &__full-address {
-              font-size: $font -2;
-              line-height: 23px;
-              width: 246px;
-              color: $textColor;
-
-            }
-          }
-        }
-        .info {
-          &__heading {
-            color: $darkHeader;
-            font-size: $font;
-            line-height: 28px;
-            margin: 40px 0 25px;
-          }
-          &__text {
-            color: $textColor;
-            font-size: $font -2;
-            line-height: 23px;
-            margin-bottom: 40px;
-            width: 80vw;
-          }
+  .footer__content {
+    font-family: $Montserrat;
+    padding: 28px 8px 0 8px;
+  }
+  .logo {
+    text-decoration: none;
+    display: inline-block;
+    width: 100px;
+    &:hover {
+      .logo__text {
+        color: $purple;
+        &--IO {
+          color: #333333;
         }
       }
+    }
+    &__text {
+      color: #333333;
+      font-size: $font +8;
+      margin-top: 40px;
+      &--IO {
+        color: $purple;
+        margin-left: -5px;
+      }
+    }
+  }
+  .about__text {
+    font-size: $font*1-2;
+    color: $textColor;
+    line-height: 21px;
+    margin: 36px 0;
+    width: 80vw;
+  }
+  .navigation__heading {
+    font-size: $font;
+    color: $darkHeader;
+  }
+  .navigation-list {
+    margin: 23px 0 37px 0;
+
+    &__link {
+      text-decoration: none;
+      color: $purple;
+      font-size: $font*1-1;
+      line-height: 23px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  .contacts {
+    &-phone {
+      &__number {
+        color: #31384d;
+        font-size: 30px;
+        font-weight: 700;
+        text-decoration: none;
+      }
+      &__call-time {
+        color: $textColor;
+        font-size: 12px;
+        line-height: 28px;
+      }
+    }
+    &-address {
+      &__city {
+        color: $darkHeader;
+        font-size: $font;
+        line-height: 28px;
+        margin: 38px 0 20px;
+      }
+      &__full-address {
+        font-size: $font*1-2;
+        line-height: 23px;
+        width: 246px;
+        color: $textColor;
+      }
+    }
+  }
+  .info {
+    &__heading {
+      color: $darkHeader;
+      font-size: $font;
+      line-height: 28px;
+      margin: 40px 0 25px;
+    }
+    &__text {
+      color: $textColor;
+      font-size: $font*1-2;
+      line-height: 23px;
+      margin-bottom: 40px;
+      width: 80vw;
     }
   }
 }
 
-
 @media (min-width: 401px) {
-  .section-footer {
-    .container {
-      .footer__content {
-        .about {
-          .logo {
-            display: flex;
-              align-items: center;
-            text-decoration: none;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            width: 180px;
-            &:hover {
-              .logo__img {
-                background-image: url('../img/logo_hover.png');
-              }
-              .logo__text {
-                color: $purple;
-                &--IO {
-                  color: #333333;
-                }
-              }
-            }
-            &__img {
-              width: 43px;
-              height: 41px;
-              background-image: url('../img/Logo.png');
-            }
-            &__text {
-              margin: 0 0 0 16px;
-              width: 130px;
-              white-space: nowrap;
-
-              &--IO {
-                margin-left: -6px;
-              }
-            }
-          }
-          .about__text {
-            width: 70vw;
-          }
-        }
-        .navigation {
-          &__heading {
-          }
-          .navigation-list {
-            &__item {
-            }
-            &__link {
-              &:hover {
-              }
-            }
-          }
-        }
-        .contacts {
-          .contact-phone {
-            &__number {
-            }
-            &__call-time {
-            }
-          }
-          .contact-address {
-            &__city {
-            }
-            &__full-address {
-            }
-          }
-        }
-        .info {
-          &__heading {
-          }
-          &__text {
-            width: 90vw;
-          }
+  .logo {
+    @include flex-row-center;
+    flex-wrap: nowrap;
+    width: 180px;
+    &:hover {
+      .logo__img {
+        background-image: url('../img/logo_hover.png');
+      }
+      &__text {
+        color: $purple;
+        &--IO {
+          color: #333333;
         }
       }
     }
+    &__img {
+      width: 43px;
+      height: 41px;
+      background-image: url('../img/Logo.png');
+    }
+    &__text {
+      margin: 0 0 0 16px;
+      width: 130px;
+      white-space: nowrap;
+
+      &--IO {
+        margin-left: -6px;
+      }
+    }
+  }
+  .about__text {
+    width: 70vw;
+  }
+  .info__text {
+    width: 90vw;
   }
 }
 
 @media (min-width: 481px) {
-  .section-footer {
-    .container {
-      .footer__content {
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding: 28px 20px 0 25px;
-        .about {
-          width: 40vw;
-          .logo {
-            &:hover {
-              .logo__img {
-              }
-              .logo__text {
-                &--IO {
-                }
-              }
-            }
-            &__img {
-            }
-            &__text {
-
-              &--IO {
-              }
-            }
-          }
-          .about__text {
-            width: 40vw;
-          }
-        }
-        .navigation {
-          width: 40vw;
-          &__heading {
-          }
-          .navigation-list {
-            &__item {
-            }
-            &__link {
-              &:hover {
-              }
-            }
-          }
-        }
-        .contacts {
-          width: 40vw;
-          .contact-phone {
-            &__number {
-            }
-            &__call-time {
-            }
-          }
-          .contact-address {
-            &__city {
-              margin: 28px 0 0 0;
-            }
-            &__full-address {
-              width: 40vw;
-            }
-          }
-        }
-        .info {
-          width: 40vw;
-
-          &__heading {
-            margin: 0 0 25px 0;
-          }
-            &__text {
-            width: 40vw;
-          }
-        }
+  .footer__content {
+    @include flex-wrap-evenly;
+    padding: 28px 20px 0 25px;
+  }
+  .about {
+    width: 40vw;
+    &__text {
+      width: 40vw;
+    }
+  }
+  .navigation {
+    width: 40vw;
+  }
+  .contacts {
+    width: 40vw;
+    &-address {
+      &__city {
+        margin: 28px 0 0 0;
       }
+      &__full-address {
+        width: 40vw;
+      }
+    }
+  }
+  .info {
+    width: 40vw;
+    &__heading {
+      margin: 0 0 25px 0;
+    }
+      &__text {
+      width: 40vw;
     }
   }
 }
 
 @media (min-width: 993px) {
-  .section-footer {
-    .container {
-      .footer__content {
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        align-items: flex-start;
-        padding: 60px 0;
-        .about {
+  .footer__content {
+    flex-wrap: nowrap;
+    align-items: flex-start;
+    padding: 60px 0;
+  }
+    .about {
+      width: 20vw;
+      &__text {
+        width: 20vw;
+      }
+    }
+    .navigation {
+      width: 12vw;
+    }
+    .contacts {
+      width: 20vw;
+        &-address__full-address {
           width: 20vw;
-          .logo {
-            &:hover {
-              .logo__img {
-              }
-              .logo__text {
-                &--IO {
-                }
-              }
-            }
-            &__img {
-            }
-            &__text {
-
-              &--IO {
-              }
-            }
-          }
-          .about__text {
-            width: 20vw;
-          }
         }
-        .navigation {
-          width: 12vw;
-          &__heading {
-          }
-          .navigation-list {
-            &__item {
-            }
-            &__link {
-              &:hover {
-              }
-            }
-          }
-        }
-        .contacts {
-          width: 20vw;
-          .contact-phone {
-            &__number {
-            }
-            &__call-time {
-            }
-          }
-          .contact-address {
-            &__city {
-
-            }
-            &__full-address {
-              width: 20vw;
-            }
-          }
-        }
-        .info {
-          width: 20vw;
-          &__heading {
-          }
-          &__text {
-            width: 20vw;
-            margin: 0;
-          }
-        }
+      }
+    .info {
+      width: 20vw;
+      &__text {
+        width: 20vw;
+        margin: 0;
       }
     }
   }
-}

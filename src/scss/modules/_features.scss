@@ -2,192 +2,137 @@
   .section-features {
     background-color: $greyBackground;
     overflow: hidden;
+  }
+  .features {
+      &-heading__heading {
+        font-size: $font*2;
+        color: $purple;
+        margin: 34px 30px;
+        line-height: 28px;
+        font-weight: 700;
+        text-align: center;
+      }
+    &-items {
+      @include flex-row-center;
+      flex-wrap: wrap;
+    }
+    &-items-about {
+      text-align: center;
+      &__heading {
+        margin: 29px 0 21px 0;
+        font-size: $font;
+        color: #323232;
+        font-family: $Montserrat;
+      }
+      &__text {
+        font-size: $font*1-2;
+        color: $textColor;
+        margin: 0 20px 44px 20px;
+        font-family: $Lato;
+        line-height: 15.406px;
+      }
+    }
+    &-editor {
+      width: 100%;
+      margin: 13px 0 13px 0;
 
-    .container {
-      .features {
-        &-heading {
-          &__heading {
-            font-size: $font*2;
-            color: $purple;
-            margin: 34px 30px;
-            line-height: 28px;
-            font-weight: 700;
-            text-align: center;
-          }
-        }
-
-          .features-content {
-            .features-items {
-              display: flex;
-              justify-content: center;
-              flex-wrap: wrap;
-              align-items: center;
-
-              .features-items-about {
-                &__heading {
-                  margin: 29px 0 21px 0;
-                  text-align: center;
-                  font-size: $font;
-                  color: #323232;
-                  font-weight: 400;
-                  font-family: $Montserrat;
-                }
-
-                &__text {
-                  font-size: $font -2;
-                  color: $textColor;
-                  margin: 0 20px 44px 20px;
-                  font-family: $Lato;
-                  line-height: 15.406px;
-                }
-              }
-            }
-          }
-
-          &-editor {
-          width: 100%;
-            margin: 13px 0 13px 0;
-
-            &__img {
-              height: 381px;
-            }
-          }
-        }
+      &__img {
+        height: 381px;
       }
     }
   }
-
+}
 
 @media only screen and (min-width: 401px) {
-  .section-features {
-    .container {
-      .features {
-        &-heading {
-          &__heading {
-            font-size: $font*3-6;
-            line-height: 40px;
-          }
-        }
-
-        .features-content {
-          &-items {
-            flex-wrap: nowrap;
-
-            &-items-img {
-            }
-
-            .features-items-about {
-
-              &__heading {
-                text-align: left;
-                margin-left: 20px;
-              }
-              &__text {
-
-              }
-            }
-          }
-        }
-        &-editor {
-            width: 100%;
-
-            &__img {
-              height: 519px;
-            }
-          }
+  .features {
+    &-heading {
+      &__heading {
+        font-size: $font*3-6;
+        line-height: 40px;
+      }
+    }
+    &-items {
+      flex-wrap: nowrap;
+      &-img {
+        min-width: 111px;
+        margin-top: 0;
+      }
+    }
+    &-items-about {
+      text-align: left;
+      &__heading {
+        margin-left: 20px;
+      }
+    }
+    &-editor {
+      &__img {
+        height: 519px;
       }
     }
   }
 }
 
 @media only screen and (min-width: 481px) {
-  .section-features {
-    .container {
-      .features {
-        .features-content {
-          .features-items {
-            flex-wrap: nowrap;
-            margin-left: 26px;
-            .features-items-img {
-              display: flex;
-              justify-content: center;
-              min-width: 111px;
-              margin-top: 0;
-            }
-
-            .features-items-about {
-              &__heading {
-                text-align: left;
-                margin-left: 20px;
-              }
-              &__text {
-                margin: 0 20px 14px 20px;
-              }
-            }
-          }
-        }
-        .features-editor {
-          position: relative;
-          height: 519px;
-          float: right;
-          width: 100%;
-
-          &__img {
-            position: absolute;
-            height: 519px;
-            float: right;
-            width: 700px;
-            right: -11px;
-          }
-        }
+  .features {
+    &-items {
+      margin-left: 26px;
+      &-img {
+        @include flex-row-center;
+      }
+    }
+    &-items-about {
+      &__text {
+        margin: 0 20px 14px 20px;
+      }
+    }
+    &-editor {
+      position: relative;
+      height: 519px;
+      float: right;
+      width: 100%;
+      &__img {
+        position: absolute;
+        float: right;
+        width: 700px;
+        right: -11px;
       }
     }
   }
 }
 
 @media only screen and (min-width: 993px) {
-  .section-features {
-    padding-top: 60px;
-    .container {
-      .features {
-        &-heading {
-          &__heading {
-            font-size: $font*3;
-            line-height: 15px;
-            float: right;
-            text-align: left;
-
-          }
-        }
-
-        .features-content {
-          float: left;
-          width: 40%;
-          .features-items {
-            .feature-items-img {}
-            .feature-items-about {
-
-              .features-items-about__heading {
-                text-align: left;
-                margin-left: 20px;
-              }
-              .feature-items-about__text {
-                margin: 0 0 14px 20px;
-              }
-            }
-          }
-        }
-
-        .features-editor {
-          position: relative;
-          float: right;
-          width: 50%;
-
-          &__img {
-            position: absolute;
-            width: 100%;
-          }
-        }
+    .section-features {
+      padding-top: 60px;
+    }
+  .features {
+    &-heading {
+      &__heading {
+        font-size: $font*3;
+        line-height: 15px;
+        float: right;
+        text-align: left;
+      }
+    }
+    &-content {
+      float: left;
+      width: 40%;
+    }
+    &-items-about {
+      &__heading {
+        text-align: left;
+        margin-left: 20px;
+      }
+      &__text {
+        margin: 0 0 14px 20px;
+      }
+    }
+    &-editor {
+      position: relative;
+      float: right;
+      width: 50%;
+      &__img {
+        position: absolute;
+        width: 100%;
       }
     }
   }

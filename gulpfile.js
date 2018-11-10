@@ -6,8 +6,6 @@ const uglify = require('gulp-uglify');
 const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const clean = require('gulp-clean');
-const cleanCss = require('gulp-clean-css');
-const minifyJs = require('gulp-js-minify');
 const concat = require('gulp-concat');
 const imagemin = require('gulp-imagemin');
 const sourcemaps = require('gulp-sourcemaps');
@@ -46,42 +44,42 @@ gulp.task('clean', function () {
 });
 
 gulp.task('html', function () {
-    gulp.src(path.src.html) //Выбор файла по нужному пути
-        .pipe(rigger()) // Плагин позволяет хранить статичные части сайта, такие как header, footer, aside и т.д., в отдельных файлах и подключать их в любой части другого файла. Больше нет надобности, в случае мелких изменений в шапке, менять десятки, а то и сотни html страниц шаблона
-        .pipe(gulp.dest(path.dist.server)) // Запись файла в папку dist
+    gulp.src(path.src.html)
+        .pipe(rigger())
+        .pipe(gulp.dest(path.dist.server))
 });
 
 gulp.task('css', function () {
     return gulp.src(path.src.scss)
-        .pipe(plumber()) // Отслеживание ошибок
+        .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass({
             errLogToConsole: true,
-            outputStyle: 'expanded' // Добавление отступов между классами в итоговых стилях
+            outputStyle: 'expanded'
         }))
-        .pipe(autoprefixer({ // Добавление префиксов
+        .pipe(autoprefixer({
             browsers: ['last 5 versions'],
             cascade: false
         }))
         .pipe(sourcemaps.write())
-        .pipe(rename("style.css")) // Изменение название с расширением css
+        .pipe(rename("style.css"))
         .pipe(gulp.dest(path.dist.css))
         .pipe(cssnano({ // Сжатие css файла
             zindex: false
         }))
-        .pipe(rename({ suffix: '.min' })) // Добавление к css файлу суфикса min
+        .pipe(rename({ suffix: '.min' }))
         .pipe(gulp.dest(path.dist.css));
 });
 
 gulp.task('js', function () {
     return gulp.src(['node_modules/jquery/dist/jquery.min.js',
         'node_modules/slick-carousel/slick/slick.js',
-        './src/js/script/script.js']) //Находит main.js файл
+        './src/js/script/script.js'])
         .pipe(rigger())
         .pipe(plumber())
         .pipe(concat('./libs/libs.min.js'))
         .pipe(uglify()) //Сжатие js
-        .pipe(gulp.dest(path.dist.js)) //Выплюнем готовый файл в build
+        .pipe(gulp.dest(path.dist.js))
 });
 
 
@@ -112,8 +110,8 @@ gulp.task('dev', function (){
         });
 
         gulp.watch(path.src.scss_modules, ['css']).on('change',browserSync.reload);
-        gulp.watch(path.src.html, ['html']).on('change', browserSync.reload)
-        gulp.watch(path.src.js, ['js']).on('change', browserSync.reload)
+        gulp.watch(path.src.html, ['html']).on('change', browserSync.reload);
+        gulp.watch(path.src.js, ['js']).on('change', browserSync.reload);
     })
 });
 

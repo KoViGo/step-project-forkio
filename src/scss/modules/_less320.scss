@@ -1,21 +1,15 @@
 @media only screen and (max-width: 319px) {
   .less320 {
     color: $purple;
-    //color: dodgerblue;
-
+  }
     .fa-9x {
       font-size: 9em;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+     @include flex-column-center-wrap;
      .fa-sun, .fa-certificate {
        animation-direction: reverse;
-       //color: yellow;
      }
     }
   }
-}
 
 @media only screen and (min-width: 320px) {
   .less320 {

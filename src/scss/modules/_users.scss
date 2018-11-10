@@ -1,257 +1,136 @@
 @media only screen and (min-width: 320px) {
-  .section-users {
-    .container {
-      .slider {
-        width: 78vw;
+  .slider {
+    width: 78vw;
+    margin: 0 auto;
+    padding-top: 63px;
+  }
+  .users {
+    text-align: center;
+    &-about {
+     @include flex-column-center-wrap;
+    }
+    &__heading {
+      color: #474747;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: 32px;
+      margin-top: 20px;
+    }
+
+    &__nick {
+      margin-bottom: 20px;
+      color: $purple;
+    }
+
+    &-comment {
+      width: 70vw;
+    }
+      &__text {
+        width: 60vw;
         margin: 0 auto;
-        padding-top: 63px;
-        .users {
-          text-align: center;
+        font-family: $Lato;
+        font-size: 17px;
+        color: $darkText;
+      }
+      &__text--violet {
+        color: $purple;
+      }
+      &__time-post {
+        font-family: $Montserrat;
+        color: $greyText;
+        line-height: 32px;
+      }
+    }
+  .social-links {
+  @include flex-column-between;
+    margin-bottom: 70px;
+  }
 
-          .users-about {
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            flex-wrap: wrap;
-            align-items: center;
+  .social-button {
+    font-family: $Montserrat;
+    text-align: center;
+  }
+  .social-btn {
+    text-decoration: none;
+    width: 250px;
+    height: 50px;
+    border-radius:4px;
+    font-size: 21px;
+    display: block;
+    color: $white;
+    text-align: center;
+    line-height: 50px;
+    margin: 30px 0 18px 0;
 
-            .users-about-author {
-              .users__img {
-
-                .users-img__img {
-                }
-              }
-              .users-about-content {
-                .users__heading {
-                  color: #474747;
-                  font-size: 24px;
-                  font-weight: 700;
-                  line-height: 32px;
-                  margin-top: 20px;
-                }
-
-                .users__nick {
-                  margin-bottom: 20px;
-                  color: $purple;
-                }
-              }
-            }
-            .users-comment {
-              width: 70vw;
-
-              .users__text {
-                width: 60vw;
-                margin: 0 auto;
-                font-family: $Lato;
-                font-size: 17px;
-                color: $darkText;
-              }
-              .users__text--violet {
-                color: $purple;
-              }
-              .users__time-post {
-                font-family: $Montserrat;
-                color: $greyText;
-                line-height: 32px;
-              }
-            }
-          }
+    &--github {
+      color: #000;
+      background-color: #f3f3f3;
+      position: relative;
+      &:hover {
+        background: #2b414d;
+          color: $white;
+      }
+      &:before {
+          font-family: $FontAwesomeBrands;
+          content: '\f09b';
+          position: absolute;
+          left: 25px;
         }
+    }
 
-        .social-links {
-          display: flex;
-          justify-content: space-between;
-          flex-direction: column;
-          align-items: center;
-          margin-bottom: 70px;
+    &--twitter {
+     @include btn-style(#26a6d1);
+      &:before {
+        content: '\f099';
+      }
+    }
 
-          .social-button {
-            font-family: $Montserrat;
-            text-align: center;
-            .social-btn {
-              text-decoration: none;
-              width: 250px;
-              height: 50px;
-              border-radius:4px;
-              font-size: 21px;
-              display: block;
-              color: $white;
-              text-align: center;
-              line-height: 50px;
-              margin: 30px 0 18px 0;
-
-              &--github {
-                color: #000;
-                background-color: #f3f3f3;
-                position: relative;
-                &:hover {
-                  background: #2b414d;
-                    color: $white;
-                }
-                &:before {
-                    font-family: $FontAwesomeBrands;
-                    content: '\f09b';
-                    position: absolute;
-                    left: 25px;
-                  }
-              }
-
-              &--twitter {
-               @include btn-style(#26a6d1);
-                &:before {
-                  content: '\f099';
-                }
-              }
-
-              &--facebook {
-                @include btn-style(#3b5998);
-                &:before {
-                  content: '\f39e';
-                }
-              }
-            }
-
-            .social-item__followers {
-              color: #848e97;
-            }
-          }
-        }
+    &--facebook {
+      @include btn-style(#3b5998);
+      &:before {
+        content: '\f39e';
       }
     }
   }
+
+  .social-item__followers {
+    color: #848e97;
+  }
 }
+
 
 @media only screen and (min-width: 401px) {
-  .section-users {
-    .container {
-      .slider {
-        .users {
-          .users-about {
-            .users-about-author {
-              display: flex;
-              flex-direction: row;
-              justify-content: space-evenly;
-              margin: 0 0 40px 0;
+  .users-about-author {
+   @include flex-wrap-evenly;
+    margin: 0 0 40px 0;
+  }
+  .users-img {
+    width: 85px;
+    height: 85px;
+    display: inline-block;
+  }
+  .users-about-content {
+    text-align: left;
+  }
 
-              .users-img {
-                width: 85px;
-                height: 85px;
-                display: inline-block;
-
-                &__img {
-                }
-              }
-              .users-about-content {
-                text-align: left;
-
-                &__heading {
-                }
-                &__nick {
-                }
-              }
-            }
-            .users-comment {
-              &__text {
-              }
-              &--violet {
-              }
-              &__time-post {
-              }
-            }
-          }
-        }
-
-        .social-links {
-          margin-top: 30px;
-          .social-button {
-            .social-btn {
-              &--github {
-                &:hover {
-                }
-                &:before {
-                }
-              }
-              &--twitter {
-                &:before {
-                }
-              }
-              &--facebook {
-                &:before {
-                }
-              }
-            }
-            .social-item__followers {
-            }
-          }
-        }
-      }
-    }
+  .social-links {
+    margin-top: 30px;
   }
 }
 
-
 @media only screen and (min-width: 481px) {
-  .section-users {
-    .container {
-      .slider {
-        .users {
-          .users-about {
-            .users-about-author {
-              justify-content: center;
-
-              .users-img {
-              margin-right: 20px;
-
-                &__img {
-                }
-              }
-              .users-about-content {
-                text-align: left;
-
-                &__heading {
-                }
-                &__nick {
-                }
-              }
-            }
-            .users-comment {
-              &__text {
-              }
-              &--violet {
-              }
-              &__time-post {
-              }
-            }
-          }
-        }
-        .social-links {
-          flex-direction: row;
-           flex-wrap: wrap;
-          justify-content: space-evenly;
-          margin-top: 54px;
-
-          .social-button {
-            .social-btn {
-              &--github {
-                &:hover {
-                }
-                &:before {
-                }
-              }
-              &--twitter {
-                &:before {
-                }
-              }
-              &--facebook {
-                &:before {
-                }
-              }
-            }
-            .social-item__followers {
-            }
-          }
-        }
-      }
-    }
+  .users-about-author {
+    justify-content: center;
+  }
+  .users-img {
+  margin-right: 20px;
+  }
+  .users-about-content {
+    text-align: left;
+  }
+  .social-links {
+    @include flex-wrap-evenly;
+    flex-direction: row;
+    margin-top: 54px;
   }
 }

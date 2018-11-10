@@ -1,8 +1,57 @@
-@mixin flex {
+@mixin btn-style($btn-color) {
+  background-color: $btn-color;
+  position: relative;
+  &:hover {
+    background: rgba(0,0,0,0);
+      color: $btn-color;
+      box-shadow: inset 0 0 0 2px $btn-color;
+  }
+  &:before {
+      font-family: $FontAwesomeBrands;
+      position: absolute;
+      left: 25px;
+    }
+}
+
+//@mixin flex-row-between {
+//  display: flex;
+//  align-items: center;
+//  justify-content: space-between;
+//}
+
+@mixin flex-row-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-column-center-wrap {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  align-items: center;
   flex-wrap: wrap;
+}
+
+@mixin flex-column-between {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
 }
+
+//@mixin flex-wrap-between{
+//  display: flex;
+//  flex-wrap: wrap;
+//  justify-content: space-between;
+//}
+
+@mixin flex-wrap-evenly{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+
+
 

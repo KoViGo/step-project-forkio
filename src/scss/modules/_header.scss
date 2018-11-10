@@ -1,6 +1,6 @@
 @media only screen and (max-width: 319px) {
   header, section, footer {
-   display: none;
+    display: none;
   }
 }
 
@@ -13,138 +13,150 @@
       padding: 0 10px;
       max-width: 1200px;
     }
-  }
-  .header {
-    font-family: $Montserrat;
-    height: 103px;
-    background-color: #27262a;
-  }
-  .header a {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-  }
 
-  .header__navbar {
-    display: flex;
-    justify-content: space-between;
-  }
+    .header {
+      font-family: $Montserrat;
+      height: 103px;
+      background-color: #27262a;
+      display: flex;
+      align-items: center;
 
+      .container {
+        padding-left: 10px;
+        padding-right: 10px;
+        min-width: 300px;
+        width: 100%;
 
-  .header__navbar-logo {
-    margin-left: 16px;
-  }
+        .header__navbar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
 
-  .header__navbar-logo,.header__navbar-button {
-    margin-top: 32px;
-  }
-
-  .header__navbar-logo span {
-    display: none;
-  }
-
-  .header__navbar-menu {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .header__navbar-menu1200 {
-    display: none;
-  }
-
-  .header__navbar-button {
-    width: 119px;
-    height: 37px;
-    color: #fff;
-    font-size: 15px;
-    font-weight: 700;
-    background-color: $purple;
-    border: 0;
-    border-radius: 20px;
-    cursor: pointer;
-  }
-  .header__navbar-button:hover {
-    background-color: #fff;
-    color: $purple;
-  }
+          .header__navbar-logo {
+            text-decoration: none;
+            display: flex;
 
 
-  .header__navbar-nav-toggle {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    margin-right: 15px;
-    margin-top: 40px;
-  }
-  .line {
-    width: 26px;
-    height: 3px;
-    background-color: #e5e3e3;
-    margin-bottom: 6px;
-    transition: all 0.4s ease;
-    transform-origin: 0.5px;
-  }
-  .line:first-child {
-    width: 20px;
-  }
-  .line:last-child {
-    margin-bottom: 0;
+            .header__logo-img {
+              width: 43px;
+              height: 41px;
+            }
+            .header__logo-text {
+              text-transform: uppercase;
+              color: $purple;
+              display: none;
+            }
+          }
+
+          .header__navbar-button {
+            width: 119px;
+            height: 37px;
+            color: #fff;
+            font-size: 15px;
+            font-weight: 700;
+            background-color: $purple;
+            border: 0;
+            border-radius: 20px;
+            cursor: pointer;
+            margin: 0 auto;
+          }
+          .header__navbar-button:hover {
+            background-color: #fff;
+            color: $purple;
+
+          }
+
+          .header__navbar-nav {
+
+            .header__navbar-nav-toggle {
+              position: relative;
+              display: flex;
+              align-items: flex-end;
+              flex-direction: column;
+
+              .line {
+                width: 26px;
+                height: 3px;
+                background-color: #e5e3e3;
+                margin-bottom: 6px;
+                transition: all 0.4s ease;
+                transform-origin: 0.5px;
+              }
+              .line:first-child {
+                width: 20px;
+              }
+              .line:last-child {
+                margin-bottom: 0;
+              }
+            }
+
+
+
+            .menu {
+              position: absolute;
+              top: 103px;
+              //left: 0;
+              right: -400px;
+              transition: all 0.4s linear;
+              width: 100%;
+              height: 400px;
+              background-color: #333333;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-around;
+
+              .menu__item {
+
+                .menu__link {
+                  font-size: 30px;
+                  color: #ffffff;
+                  font-weight: 400;
+                  height: 99px;
+                  padding-left: 22px;
+                  border-bottom: 1px Solid #3b3b3b;
+                }
+
+                .menu__link a:hover::before {
+                  content: '';
+                  width: 4px;
+                  height: 53px;
+                  position: absolute;
+                  left: 0;
+                  background-color: $purple;
+                }
+
+                .menu__link:hover {
+                  color: $purple;
+                }
+              }
+            }
+          }
+          .active {
+            .header__navbar-nav-toggle {
+
+              .line:first-child{
+                width:26px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   .active .line:nth-of-type(1) {
     transform: rotate(45deg);
     width: 26px;
   }
-
   .active .line:nth-of-type(2) {
     opacity: 0;
   }
-
   .active .line:nth-of-type(3) {
     transform: rotate(-45deg);
   }
-
-  .header__navbar-nav-menu {
-    position: absolute;
-    top: 103px;
-    //left: 0;
-    right: -400px;
-    transition: all 0.4s linear;
-    width: 100%;
-    height: 400px;
-    background-color: #333333;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
-  .header__navbar-nav-menu a {
-    font-size: 30px;
-    color: #ffffff;
-    font-weight: 400;
-    height: 99px;
-    padding-left: 22px;
-    border-bottom: 1px Solid #3b3b3b;
-  }
-
-  .header__navbar-nav-menu a:hover::before {
-    content: '';
-    width: 4px;
-    height: 53px;
-    position: absolute;
-    left: 0;
-    background-color: $purple;
-  }
-
-  .header__navbar-nav-menu a:hover {
-    color: $purple;
-  }
-
-  .active .header__navbar-nav-menu {
+  .active .menu {
     right: 0;
   }
-
   .header__navbar-nav-menu768 {
     display: none;
   }
@@ -245,12 +257,17 @@
 }
 
 @media only screen and (min-width: 993px) {
+  .container {
+    margin: 0 auto;
+    max-width: 1180px;
+  }
+
+
   .header {
     height: 100px;
   }
 
   .header__navbar {
-    max-width: 1200px;
     height: 100px;
     display: flex;
     align-items: center;
